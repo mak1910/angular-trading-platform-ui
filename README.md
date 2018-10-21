@@ -1,27 +1,18 @@
 # VadapavTradingPlatform
+========================
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
+Tasks
+-----
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1) /user/create -> Register a new user
+2) /user/authenticate -> Validate email/password and return all user details
+3) /portfolio/getAll -> Get all portfolios for the user
+4) /portfolio/create -> Create a new portfolio
+5) /portfolio/delete -> Delete a portfolio
+6) /portfolio/stocks -> Get details of all stocks being held within this portfolio
+7) /order/create -> Add a new BUY or SELL order for a particular stock & portfolio & user
+8) /order/getAll -> Get all orders for a given portfolio
+9) /order/delete -> Delete a particular order
+10) /stocks/getAll -> Get updated price of all stocks from both exchanges
+11) /stocks/:id/history -> Get historical price details for the stock
+12) /trade/getAll -> Get all trades for a given portfolio
