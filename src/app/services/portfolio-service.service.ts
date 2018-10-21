@@ -24,6 +24,7 @@ export class PortfolioService {
       p3.name = "Trail";
       p3.value = 1828.34;
 
+      console.log("Created portfolios");
       return [p1, p2, p3];
   }
 }

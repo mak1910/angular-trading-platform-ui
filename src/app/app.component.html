@@ -2,11 +2,11 @@
 <!-- Navbar -->
 <app-header [(title)]="title"></app-header>
 
-<!-- Spacing between navbar and main content -->
-<div class="mt-4"></div>
 
 <!-- Login Page -->
 <div class="container" [hidden]="client.id!=0">
+  <!-- Spacing between navbar and main content -->
+  <div class="mt-4"></div>
   <div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
@@ -16,10 +16,6 @@
 </div>
 
 <!-- User Dashboard -->
-<div class="container" [hidden]="client.id==0">
-  <h1> User Dashboard </h1>
-  <div class="row">
-    <div class="col-md-8"></div>
-    <div class="col-md-4"></div>
-  </div>
+<div class="container-fluid" [hidden]="client.id==0">
+  <app-dashboard [client]="client"></app-dashboard>
 </div>

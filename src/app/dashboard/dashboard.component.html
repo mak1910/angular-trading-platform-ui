@@ -1,3 +1,13 @@
-<p>
-  dashboard works!
-</p>
+<div class="row">
+  <div class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+      <h4 id="sidebar-header"> Portfolios </h4>
+      <ul class="nav flex-column">
+        <li class="nav-item" *ngFor="let portfolio of portfolios">
+          <a class="nav-link"> <span class="feather"> {{ portfolio.name }} </span> </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-9 ml-sm-auto col-lg-10 px-4">{{client.name}}</div>
+</div>
