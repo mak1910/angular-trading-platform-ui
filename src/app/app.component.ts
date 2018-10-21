@@ -18,5 +18,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  loginUser(c: Client): void {
+    console.log("Yayyyyy!!");
+    this.client = c;
+  }
   
 }

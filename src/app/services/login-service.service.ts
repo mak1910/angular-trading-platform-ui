@@ -10,7 +10,7 @@ export class LoginService {
   constructor() { }
 
   validateUser(email: string, password: string): Client {
-    if(email == "quotemridul@gmail.com" && password == "mridul") {
+    if(email == "mridul" && password == "mridul") {
       let c: Client = new Client();
       c.id = 1;
       c.name = "Mridul";
