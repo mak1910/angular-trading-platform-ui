@@ -9,18 +9,14 @@ import { Client } from './models/client';
 
 export class AppComponent implements OnInit {
   
-  title:string;
-  client: Client;
+  title: string = "Trading Platform";
+  client: Client = new Client();
 
-  constructor() {
-    this.title = 'Trading Platform';
-    this.client = new Client();
-  }
-
+  constructor() {}
   ngOnInit(): void {}
 
   loginUser(c: Client): void {
-    console.log("Yayyyyy!!");
+    console.log("User logged in!");
     this.client = c;
   }
   
