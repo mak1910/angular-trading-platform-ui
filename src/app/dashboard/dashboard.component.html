@@ -9,5 +9,33 @@
       </ul>
     </div>
   </div>
-  <div class="col-md-9 ml-sm-auto col-lg-10 px-4">{{client.name}}</div>
+  <div class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+              <h4 id="body-header"> {{defaultPortfolio.name}} Portfolio </h4>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Total Purchase Price</th>
+                    <th>Present Price </th>
+                    <th>Total Present Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let stock of stocks">
+                    <td>{{stock.name}}</td>
+                    <td>{{stock.quantity}}</td>
+                    <td>{{stock.value}}</td>
+                    <td>{{stock.presentPrice}}</td>
+                    <td>{{stock.quantity*stock.presentPrice}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

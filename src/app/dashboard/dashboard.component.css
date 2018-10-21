@@ -56,3 +56,10 @@
   border-bottom: 1px solid grey;
   padding-bottom: 10px;
 }
+
+#body-header {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+   padding-bottom: 10px;
+}

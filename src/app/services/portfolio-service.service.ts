@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Portfolio } from './../models/portfolio';
+import { Client } from './../models/client';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class PortfolioService {
 
   constructor() { }
 
-  getAllPortfolios(): Array<Portfolio> {
+  getAllPortfolios(client: Client): Array<Portfolio> {
       let p1: Portfolio = new Portfolio();
       p1.id = 1;
       p1.name = "High Risk";

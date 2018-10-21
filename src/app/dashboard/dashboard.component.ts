@@ -1,8 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PortfolioService } from './../services/portfolio-service.service';
-import { Portfolio } from './../models/portfolio';
+import { StockService } from './../services/stock-service.service';
 
+import { Portfolio } from './../models/portfolio';
 import { Client } from './../models/client';
+import { Stock } from './../models/stock';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,12 +14,15 @@ import { Client } from './../models/client';
 export class DashboardComponent implements OnInit {
   @Input() client: Client;
   portfolios: Array<Portfolio>;
-  constructor(private portfolioService: PortfolioService ) { }
+  defaultPortfolio: Portfolio;
+  stocks: Array<Stock>;
+  constructor(private portfolioService: PortfolioService, private stockService: StockService ) { }
 
   ngOnInit() {
-    console.log("Trying to get portfolios");
-    this.portfolios = this.portfolioService.getAllPortfolios();
-    console.log(this.portfolios);
+    this.portfolios = this.portfolioService.getAllPortfolios(this.client);
+    this.defaultPortfolio = this.portfolios[0];
+    this.stocks = this.stockService.getAllStocks(this.defaultPortfolio);
+    console.log("Got portfolios : " + this.portfolios);
   }
 
 }
